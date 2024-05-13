@@ -1,0 +1,32 @@
+
+Yeni bir proje için 
+ng new northwind-store --skip-tests=true --standalone=false //northwind-store adında bir proje oluşturduk.
+
+ng serve ile proje ayağa kalktı.
+
+Gerekli paketler
+Angular Language Services
+Bootstrap 5 quick snippets
+Github pull request
+prettier - code formatter
+vscode-icons
+
+Angular .json angularla ilgili konfigrasyonlar
+src kaynak kodlarımızın olduğu klasör.
+package.json npm paketlerini yönettiğimiz dosya
+
+internete kapalı ağda node modules klasörünü kopyalayıp projemize aynı adda almalıyız.
+
+tsconfig dosyası typscritp konfigürasyonları yapacağız.
+
+
+style css - uygulama geneli stiller buraya yazılır.
+main.ts - uygulama burayla başlar.
+index.html - SPA(Single page application) fiziksel anlamda tek sayfa bu html sayfası. Routing yardımıyla yazdığımız componentlere gideriz. (Bir component ts,html,css ve spec.ts dosyalarından oluşur. )
+
+assets - uygulamada kullanılacak resim müzik video veya farklı javascript dosyalarının tutulduğu yer
+
+uygulamayı oluşturan tüm varlıklar app klasörünün altında çalışır.
+
+
+
