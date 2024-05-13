@@ -43,3 +43,28 @@ npm install bootstrap@5.3.3
 
 
 package.json içinde dependencies Uygulamanaın sağlıklı çalışabilmesi içn ihtiyaç duyulan paketleri belirtir. devDependencies ise development safhasında gerekli paketleri belirtir.
+
+
+Projmize bootstrap ve css dosyası eklemek istersek angular.json dosyasında  "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ], 
+            bölümüne yazmalıyız. Çünkü index.html e eklenen  her link yeni bir istek olarak sunucuya gider. 
+            Aynı şekilde javascript te aynı dosyada bu bölüme eklenir;  
+              "scripts": [
+              "node_modules/bootstrap/dist/css/bootstrap.bundle.min"
+            ]
+
+----Popper js popup eklemek için kullanılır.
+
+
+
+-----Kısa yol 
+
+div.row>div.col*2 
+
+<div class="row">
+  <div class="col"></div>
+  <div class="col"></div>
+</div>  
+bunu oluşturur. ">" işareti child ı ifade eder.
