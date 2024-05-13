@@ -28,5 +28,18 @@ assets - uygulamada kullanılacak resim müzik video veya farklı javascript dos
 
 uygulamayı oluşturan tüm varlıklar app klasörünün altında çalışır.
 
+----https://getbootstrap.com/ //Evde bunu incele
 
 
+
+Bu projede bootstrap kullanacağız. Bunun için yukarıdaki linkten yararlandık.
+
+--UI için https://themeforest.net/ sitesinden template satın alınabilir.
+
+
+Proje dizininde nmp install komut satırında çalıştırılırsa package.json daki paketleri yükler.
+Paket ismi yazarsak yanına ilgili paketi alır ve package.json a koyar. fiziksel olarak node_modules altında tutulur.
+npm install bootstrap@5.3.3
+
+
+package.json içinde dependencies Uygulamanaın sağlıklı çalışabilmesi içn ihtiyaç duyulan paketleri belirtir. devDependencies ise development safhasında gerekli paketleri belirtir.
