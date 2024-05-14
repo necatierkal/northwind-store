@@ -1,110 +1,14 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button
-      class="navbar-toggler d-lg-none"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#collapsibleNavId"
-      aria-controls="collapsibleNavId"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
-      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" href="#" aria-current="page"
-            >Home <span class="visually-hidden">(current)</span></a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="dropdownId"
-            data-bs-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-            >Dropdown</a
-          >
-          <div class="dropdown-menu" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="#">Action 1</a>
-            <a class="dropdown-item" href="#">Action 2</a>
-          </div>
-        </li>
-      </ul>
-      <form class="d-flex my-2 my-lg-0">
-        <input class="form-control me-sm-2" type="text" placeholder="Search" />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Search
-        </button>
-      </form>
-    </div>
-  </div>
-</nav>
-<div class="container mt-3">
+<app-menu></app-menu>
+
+<div class="container-mt-3">
   <div class="row">
-    <!-- Medium ekranlar ve üstü için 3-9 olarak ekranı böldük, altı için 12 ye 12 olarak ekler yani diğer elemanı alta alır. Responsive yapı.-->
     <div class="col-md-3">
-      <h4 class="border-bottom">Kategoriler</h4>
-      <!-- Hover added -->
-      <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action active"
-          >Active item</a
-        >
-        <a href="#" class="list-group-item list-group-item-action"
-          >Item</a
-        >
-        <a href="#" class="list-group-item list-group-item-action disabled"
-          >Disabled item</a
-        >
-      </div>
-      
+      <app-category-list></app-category-list>
     </div>
 
     <div class="col-md-9">
-      <h4 class="border-bottom">Ürünler</h4>
-      <div class="list-group">
-        <a
-          href="#"
-          class="list-group-item list-group-item-action flex-column align-items-start active"
-          aria-current="true"
-        >
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Heading</h5>
-            <small class="text-muted">Description</small>
-          </div>
-          <p class="mb-1">Paragraph</p>
-          <small class="text-muted">paragraph footer</small>
-        </a>
-        <a
-          href="#"
-          class="list-group-item list-group-item-action flex-column align-items-start"
-        >
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Heading</h5>
-            <small class="text-muted">Description</small>
-          </div>
-          <p class="mb-1">Paragraph</p>
-          <small class="text-muted">paragraph footer</small>
-        </a>
-        <a
-          href="#"
-          class="list-group-item list-group-item-action flex-column align-items-start disabled"
-        >
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Heading</h5>
-            <small class="text-muted">Description</small>
-          </div>
-          <p class="mb-1">Paragraph</p>
-          <small class="text-muted">paragraph footer</small>
-        </a>
-      </div>
+      <app-product-list></app-product-list>
+
       
     </div>
   </div>

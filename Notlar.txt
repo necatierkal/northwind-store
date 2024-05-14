@@ -68,3 +68,62 @@ div.row>div.col*2
   <div class="col"></div>
 </div>  
 bunu oluşturur. ">" işareti child ı ifade eder.
+-----------------------------------------------------------
+Componentler oluşturduk.
+ng g c components/menu --inline-style=true
+ng g c components/Category-list --inline-style=true
+ng g c components/Product-list --inline-style=true
+DOSKEY /history > cmd_history20240514.txt
+-------------------------------------------------------------
+
+20240514_AngularLessonTwo
+Ng serve p komutu port değişir.
+Varsayılan olarak değiştirmek için angular json 
+Angular CLI app in altında çalışır.
+Çok basit uygulamalar hariç external çalışırız.
+Menu cmponenti standalone = false oluştrduğumuz için app modulün altına import edildi.
+Data Binding
+Template ile class arasında veri alışverişi sağlar.
+Angular Data Binding Yöntemleri
+Interpolation
+Template <=Class tek yönlü interpolation kullanırız. {} ile kullanırız
+Property Binding
+Template <=Class tek yönlü class atribute in alınmasını sağlar.[ ] ile kullanırız.
+Event Binding
+Template =>Class tek yönlü () ile kullanırız.
+TwoWay Binding
+Template <=>Class ili yönlü [{}] Banana in Box
+Angular Data Binding Stratejileri (Change Detection Strategy)
+Default-Auto
+OnPush-Trigger ile(buton, textbox vs)
+DOM (Document Object Model)kullancının etkileşimde olduğu model
+
+
+-----------------------------------------------------------
+Lifecycle Hooks:
+ngOnInit: İlgili komponent yüklendiğinde bir defa tetiklenir
+ngOnChanges: İlgili komponentte bir parametrede(input parametresi) değişiklik olduğunda tetiklenir.
+ngDoCheck: Herhangi bir komponentte değişiklik olduğunda tetiklenir.
+ngOnDestroy: İlgili komponent .....
+
+ngOnInit ve Asenkron İstek: ngOnInit içinde, asıl veri yükleme işlemini yapan loadCategories isimli bir metod çağırılır. Bu metod, HTTP GET isteğini gönderir ve bir Observable döndürür. subscribe metodunu kullanarak, bu Observable'a abone olunur. Veri başarıyla geldiğinde, categories dizisine atanır; bir hata oluştuğunda ise hata konsola yazdırılır.
+
+private loadCategories(): void {
+
+this.http.get<Category[]>("http://localhost:5222/api/Categories").subscribe(
+
+      (data) => {
+
+        this.categories = data; // Gelen veriyi component'in state'ine ata
+
+      },
+
+      (error) => {
+
+        console.error('Error fetching categories', error); // Hata yönetimi
+
+      }
+
+
+
+Angularda observable mimarisi çalışıyor. bunu rxjs kütüphanesi sağlıyor. Ayrıntılı bilgi https://rxjs.dev/

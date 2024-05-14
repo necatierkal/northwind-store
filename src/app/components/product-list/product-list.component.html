@@ -1,0 +1,9 @@
+<h4 class="border-bottom">Products</h4>
+
+<div class="list-group">
+  <a
+    *ngFor="let product of products"
+    href="#"
+    class="list-group-item list-group-item-action">{{ product.name }} {{product.unitPrice}}</a
+  >
+</div>
