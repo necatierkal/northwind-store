@@ -127,3 +127,40 @@ this.http.get<Category[]>("http://localhost:5222/api/Categories").subscribe(
 
 
 Angularda observable mimarisi çalışıyor. bunu rxjs kütüphanesi sağlıyor. Ayrıntılı bilgi https://rxjs.dev/
+
+---------------------------------------------------------------------
+Pipe: template de bir veriyi formatlamak için kullanılır (Html de). Parametre alabilirler. Bir class tır. Bunu pipe yapan şey bir dekoratördür. Aynı veri için birden fazla pipe aynı anda kullanılabilir.
+
+Dokümantasyon built in pipes ta hazır olan formatlar.
+
+Kendimiz custom bir pipe yazmak istersek (currency,uppercase,lowercase gibi) konsolda;
+    ng generate pipe [name]
+
+    Bir transfer metodu oluşturur. Bu metodun içine ne yazarsak custom pipe onu döndürür.
+
+----------------------------------------------------------------
+
+Servisler: Componentler arasında kullanılacak ortak iş kurallarının ve veri paylaşımının oluşturulduğu class lardır. iş kuralı katmanında oluşturulur.
+Bu class lar new lenmeden dependency injection ile çağırılır.
+
+@Injectable ile yapılır. 
+
+Dependency injection ile üretilen instance ın lifescyle ı için;
+Bir servisi ilgili component e provide edilirse o component için bir instance oluşturur.  (Transcient gibi çalışır.)
+Modüle provide edilirse ; modül bileşenlerinin tümü için tek instance üretir. (Scope gibi)
+Root modüle yani main de çağırılan ve programın başladığı modüle provide edilirse; .............................(Singleton gibi çalışır)
+
+servis oluşturmak için  
+
+ng g s services/category komutunu çalıştırdık.(Terminal)
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Direktif: Html i extend etmeyi sağlayan nesnelerdir. (*ngFor,*ngIf..). Htmle yeni yetenekler kazandırır. 
+-Componentler de birer direktiftir.
+-Attribute direktifler (ngstyle...)
+-Yapısal direktifler (*ngFor...)
+
+--------------------------------------------------------------
+https://typescript-play.js.org/
+--------------------------------------------------------------

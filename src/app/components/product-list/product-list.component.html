@@ -4,6 +4,15 @@
   <a
     *ngFor="let product of products"
     href="#"
-    class="list-group-item list-group-item-action">{{ product.name }} {{product.unitPrice}}</a
+    class="list-group-item list-group-item-action"
   >
+    <div class="col">{{ product.name }}</div>
+    <div class="col">
+      {{ product.unitPrice | currency : "₺" : false : "1.2-2" }}
+    </div>
+    <!-- burada unit price para birimini tl olarak değiştirdik, tam sayı kısmını en az 1 basamak, küsürat kısmını enz ve en çok 2 basamak olarak ayarladık. -->
+    <div class="row justify-content-center align-items-center g-2"></div>
+    <div class="col">{{ product.quantityPerUnit | uppercase }}</div>
+    <div class="row justify-content-center align-items-center g-2"></div>
+  </a>
 </div>

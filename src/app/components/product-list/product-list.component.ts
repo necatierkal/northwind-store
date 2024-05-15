@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Product } from '../../models/product.model';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -12,12 +13,13 @@ export class ProductListComponent implements OnInit {
 
   title: string = 'Products';
   products: Product[] = [];
-  constructor(private httpClient:HttpClient){ //Aldığı değişkenin başına erişim belirteci konuursa dependency imjection yapmış oluruz.
+  constructor(private productService:ProductService){ //Aldığı değişkenin başına erişim belirteci konuursa dependency injection yapmış oluruz.
   
   }
   ngOnInit(): void{ //Sayfa yüklendiğinde
-  this.httpClient.get<Product[]>("http://localhost:22437/api/Products").subscribe(data=>{
+  this.productService.getProducts().subscribe(data=>{
     this.products=data;
   });
 }
 }
+
