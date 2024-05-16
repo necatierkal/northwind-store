@@ -4,6 +4,7 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { MyCartComponent } from './components/my-cart/my-cart.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
  // {
@@ -14,6 +15,16 @@ const routes: Routes = [
         path:'', 
         pathMatch:'full', //url de eşit path e bak. Yapılan route buna eşit mi? Routeların sırası önemli.
         redirectTo:'urunler'  //Hiçbir route tanımı yazmadığım zaman ürünlere redirect et. 
+      },
+      {
+        //rootta admin çağırıldığında lazy load ile yani ihtiaç olduğunda(çağırıldığında) belirtilen path teki modülü yükler ve route eder. Açılacak tüm modüller bu şekilde çağırılırsa
+        //bir seferde herşeyi yüklemez boyut daha küçük, sayfa daha hızlı olur.
+        path:'admin',
+        loadChildren:()=>import('./modules/admin/admin.module').then(t=>t.AdminModule)
+      },
+      {
+        path:'login',
+        component: LoginComponent //Login component i direkt olarak appmodule altından route edilecek.
       },
       {
         //Buraya yazılanlar birşeyin child i olarak belirtilmediyse appcomponentin child ıdır.

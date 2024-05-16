@@ -174,3 +174,22 @@ Uygulama içinde veri filtrelemesi
 **Angularda sayfanın yeniden yüklenmesi istenen bir durum değildir. Bunun yerine mevcut route u aktifleştirerek istenen sayfaya yönlendirme yapılır. 
 **Veri taşıması 3 şekilde yapılır. --Header ---Body ---Url vasıtasıyla
 **Bizim tercih ettiğimiz şekli root(Url) vasıtasıyla veriyi taşımaktır. Arama motorları query stringleri listelemez.
+
+------------------------------------------------------------------------------------
+
+Login ekranı için ;
+ng g m --routing=true // dersek route tanımı da yapar, bir de route modülü oluşturur. Burada bir modül oluşturuyoruz.
+ng g m modules/admin --routing=true //Bunu çalıştırdık.
+
+Admin sayfalarının kendisine özgü tasarımı olacaksa; admin layoutlar oluşturulmalı. Bunun için component oluşturduk.
+ng g c modules/admin/admin-layout 
+
+---------------------------
+Shared modül oluşturuyoruz, çünkü bu modülü birden fazla yerde kullanacağız.
+ng g m modules/shared //--routing demedik çünkü routing yapmayacağız.
+-----------------------------------------
+Lazyloading
+İlgili modülün direkt olarak appmodule ile değil ,routelarla almak, böylelikle appmodulu başlatan main.ts (derlenmiş hali mai.js) 
+boyutunun küçük kalmasını ve ilgili modüle ihtiyaç duyulduğunda yüklenmesini sağlar.
+Bizim şuana kadarki yapımız eager loading ti yani appmodule ile sağlanıyordu. Bundan sonraki safhada lazyload a çevireceğiz.
+---------------------------------------------------------------
