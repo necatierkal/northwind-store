@@ -16,11 +16,16 @@ const routes: Routes = [
         redirectTo:'urunler'  //Hiçbir route tanımı yazmadığım zaman ürünlere redirect et. 
       },
       {
+        //Buraya yazılanlar birşeyin child i olarak belirtilmediyse appcomponentin child ıdır.
         path:'',//Route tanımları parent tan child a doğrudur. Bu yüzden Burayı boş bıraktık. Burası boş olduğu için direk /urunler veya /sepetim olarak çağırabiliriz aşağıdakileri.
         component: MainLayoutComponent,
         children:[ 
           {
             path:'urunler', 
+            component:ProductListComponent
+          } ,
+          {
+            path:'urunler/:categoryId', 
             component:ProductListComponent
           } ,
           {
@@ -36,7 +41,7 @@ const routes: Routes = [
 ];//Routeları app. module.ts altından buraya taşıdık. Burasının işi, buradan yönetimi daha doğru
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)], //Modülümün ihtiyaç duyduğu diğer nesnelere erişim için import etmek gerek
+  imports: [RouterModule.forRoot(routes)], //Modülümün ihtiyaç duyduğu diğer nesnelere erişim için import etmek gerek.Ana route tanımları burada yapılır her zaman. appcomponent altında render eder ana routeları
   exports: [RouterModule] //Bu modülün ilgili nesnelerini beni import eden modüle de import et demek export. 
 })
 export class AppRoutingModule { }

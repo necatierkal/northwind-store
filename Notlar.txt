@@ -164,3 +164,13 @@ Direktif: Html i extend etmeyi sağlayan nesnelerdir. (*ngFor,*ngIf..). Htmle ye
 --------------------------------------------------------------
 https://typescript-play.js.org/
 --------------------------------------------------------------
+**Aynı sayfada birden fazla router_outlet kullanabiliriz. Ancak böyle bir durumda isim verilmesi gerekmektedir.
+**Sabit bir şablon oluşturuyoruz ve bütün sayfalarda değişmeden kalıyor. Buna masterpage veya layout denir.
+**Her child component, parent component içindeki router_outlet de açılır.
+
+--------------------------------------------------------------
+Uygulama içinde veri filtrelemesi
+
+**Angularda sayfanın yeniden yüklenmesi istenen bir durum değildir. Bunun yerine mevcut route u aktifleştirerek istenen sayfaya yönlendirme yapılır. 
+**Veri taşıması 3 şekilde yapılır. --Header ---Body ---Url vasıtasıyla
+**Bizim tercih ettiğimiz şekli root(Url) vasıtasıyla veriyi taşımaktır. Arama motorları query stringleri listelemez.

@@ -5,8 +5,11 @@
 <div class="list-group">
   <a
     *ngFor="let category of categories"
-    href="#"
+    routerLink="/urunler/{{category.id}}"   
     class="list-group-item list-group-item-action"
-    >{{ category.name }}</a
+    >{{category.name}}</a
   >
 </div>
+
+
+ <!-- href yerine routerlink kulladık, bir rotayı aktifleştiren direktiftir bu kullanım. Href yazsaydık sayfayı tamamen yenileyecekti bunu istemiyoruz. Postback olmaması lazım -->

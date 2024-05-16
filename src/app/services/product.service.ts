@@ -14,5 +14,8 @@ export class ProductService {
     return this.httpClient.get<Product[]>("http://localhost:22437/api/Products"); 
 }
 
+getProductsByCategoryId(categoryId:number):Observable<Product[]>{
+  return this.httpClient.get<Product[]>(`http://localhost:22437/api/Categories/${categoryId}/products`); //altgr+;; interpolation yapacaksak tek tırnak veya çift tırnak olmaz. Bu işarete yazılmalı.(Interpolation ${categoryId})
+ }
 
 }
