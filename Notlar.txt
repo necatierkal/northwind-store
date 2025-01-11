@@ -192,4 +192,21 @@ Lazyloading
 İlgili modülün direkt olarak appmodule ile değil ,routelarla almak, böylelikle appmodulu başlatan main.ts (derlenmiş hali mai.js) 
 boyutunun küçük kalmasını ve ilgili modüle ihtiyaç duyulduğunda yüklenmesini sağlar.
 Bizim şuana kadarki yapımız eager loading ti yani appmodule ile sağlanıyordu. Bundan sonraki safhada lazyload a çevireceğiz.
----------------------------------------------------------------
+--------------------------------------------------------------
+
+Buradan sonrası Cuma günü katılamadğım ders. Videoları mevcut. Oradan devam ediyorum.
+
+---------------------------------------------------------------------------------------
+
+ng g s services/account komutuyla account adında bir servis oluşturduk.
+
+model klasörüne sağ tıklayıp new file dedik ve token.model.ts dosyasını oluşturduk.
+
+Formlara veri göndermek veya formlardan veri almak için iki yöntem vardır;
+  -Template driven form (biz projede bununla çalıştık.) Template driven çalışabilmek için FormModule import edilmeli.
+  -Reactive form
+
+
+Template driven form yönteminde iki yöntem ile alınabilir; event binding ya da two-way binding. (Bunun için html de form elemanlarına name vermeliyiz.)
+
+Butonlar formun içindeyse ve type belirtmezsek submit olur, dışındaysa ve type belirtmezsek button olur.
