@@ -1,0 +1,17 @@
+<app-menu></app-menu>
+
+<div class="container-mt-3">
+  <div class="row">
+    <div class="col-md-3">
+      <app-category-list></app-category-list>
+    </div>
+
+    <div class="col-md-9">
+      <router-outlet></router-outlet>
+      <!-- route vasıtasıyla render edilecek komponentler burada render edilsin -->
+      <!-- <app-product-list></app-product-list>   burasını artık sayfa load olunca çağırmadık route ile çağırıldığında dolmasını sağladık. -->
+
+      
+    </div>
+  </div>
+</div>
